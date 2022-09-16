@@ -1,4 +1,6 @@
 # Author: Austin Earl
+# Content: Tic Tac Toe Game
+# Description: A little Tic Tac Toe Game that might be a little over engineered. But it was fun to make. :P
 from enum import Enum
 
 
