@@ -34,3 +34,9 @@ class Die:
             self.points = 50
         else:
             self.points = 0
+
+# Required ascii art ;)
+#       |\      _,,,---,,_
+# ZZZzz /,`.-'`'    -.  ;-;;,_
+#      |,4-  ) )-,_. ,\ (  `'-'
+#     '---''(_/--'  `-'\_)  Felix Lee
