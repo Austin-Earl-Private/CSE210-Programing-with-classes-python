@@ -8,9 +8,9 @@ class Director:
     The responsibility of a Director is to control the sequence of play.
 
     Attributes:
-        dice (List[Die]): A list of Die instances.
+        card (Card): The card that we pull from and call to randomize
         is_playing (boolean): Whether or not the game is being played.
-        score (int): The score for one round of play.
+        guess (GuessPosition): Enum help to indicate wither the player is guessing high or low
         total_score (int): The score for the entire game.
     """
 
@@ -38,7 +38,7 @@ class Director:
             self.do_outputs()
 
     def get_inputs(self):
-        """Ask the user if they want to roll.
+        """Ask the user what their guess is .
 
         Args:
             self (Director): An instance of Director.
@@ -47,14 +47,12 @@ class Director:
         print(f'The Card is: {self.card.getCardNumber()}')
         answer = input("Higher or Lower? [h/l] ")
         if answer == 'h':
-            self.guess =  GuessPosition.HIGHER
+            self.guess = GuessPosition.HIGHER
         elif answer == 'l':
             self.guess = GuessPosition.LOWER
 
-        # self.is_playing = (roll_dice == "y")
-       
     def do_updates(self):
-        """Updates the player's score.
+        """Updates the player's score and repulls the card.
 
         Args:
             self (Director): An instance of Director.
@@ -72,7 +70,7 @@ class Director:
 
 
     def do_outputs(self):
-        """Displays the dice and the score. Also asks the player if they want to roll again. 
+        """Displays the score. Also asks the player if they want to play again.
 
         Args:
             self (Director): An instance of Director.
