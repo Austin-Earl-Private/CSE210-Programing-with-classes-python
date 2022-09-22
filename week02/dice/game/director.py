@@ -57,15 +57,12 @@ class Director:
         if not self.is_playing:
             return 
 
-        score_check = self.score
+
         for i in range(len(self.dice)):
             die = self.dice[i]
             die.roll()
             self.score += die.points
         #     If the score has not changed, that means that we have not rolled any ones or fives
-        if self.score == score_check:
-            self.is_playing = False
-            return
         self.total_score += self.score
 
     def do_outputs(self):
@@ -84,4 +81,4 @@ class Director:
 
         print(f"You rolled: {values}")
         print(f"Your score is: {self.total_score}\n")
-        self.is_playing == (self.score > 0)
+        self.is_playing = (self.score > 0)
