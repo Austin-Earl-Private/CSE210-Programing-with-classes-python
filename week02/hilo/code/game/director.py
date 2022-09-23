@@ -22,7 +22,7 @@ class Director:
         """
         self.card = Card()
         self.is_playing = True
-        self.total_score = 0
+        self.total_score = 300
         self.guess = GuessPosition.HIGHER
 
 
