@@ -1,0 +1,19 @@
+from week04.rfk.game.casting.actor import Actor
+
+
+# TODO: Implement the Artifact class here. Don't forget to inherit from Actor!
+
+class Artifact(Actor):
+    def __init__(self):
+        super().__init__()
+        self._message = ''
+
+    def set_message(self,message):
+        self._message = message
+
+    def get_message(self):
+        return self._message
+
+# Inheritance allows us to create groupings and base templates of functionality. It is like in real life where we have
+# groupings on different objects and the become more abstract the more we generalize. AKA humans are mammals but not all
+# mammals are humans. It allows us to make DRY code and also in ways follow KISS.
