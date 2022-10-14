@@ -13,8 +13,13 @@ project folder. Select the main module inside the hunter folder and click the "r
 ---
 The project files and folders are organized into weeks then projects.
 
-Current week is week04 - project Greed
+Current week is week05 - project Cycle
 
+## Command
+---
+```commandline
+python3 cycle
+```
 ## Required Technologies
 ---
 * Python 3.8.0
